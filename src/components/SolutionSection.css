@@ -1,0 +1,77 @@
+.solution-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.content h2 span {
+  color: #28c7b7; /* Color for emphasized text */
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #323131;
+  margin-bottom: 20px;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 87%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.solutions-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.solution-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.solution-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #28c7b7;
+}
+
+.solution-card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.read-link {
+  color: #28c7b7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-link:hover {
+  text-decoration: underline;
+}

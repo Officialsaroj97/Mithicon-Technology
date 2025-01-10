@@ -1,0 +1,70 @@
+.why-training-section {
+  background-color: #f6fafc;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.why-training-section h2 {
+  font-size: 28px;
+  color: #2d2d2d;
+  margin-bottom: 30px;
+}
+
+.training-stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border: 1px solid #dfe8f1;
+}
+
+.stat-box h3 {
+  font-size: 22px;
+  color: #2d2d2d;
+  margin-bottom: 20px;
+}
+
+.stat-box p {
+  font-size: 16px;
+  color: #595959;
+  margin-bottom: 40px;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+}
+
+.stat-item h2 {
+  font-size: 48px;
+  color: #39bfa6;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 16px;
+  color: #595959;
+}
+
+.footnote {
+  font-size: 14px;
+  color: #7a7a7a;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+.source {
+  margin-top: 20px;
+}
+
+.source img {
+  width: 120px;
+}

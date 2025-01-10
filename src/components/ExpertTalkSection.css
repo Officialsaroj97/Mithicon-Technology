@@ -1,0 +1,89 @@
+.expert-talk-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d0d0d; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 30px;
+  border-radius: 8px;
+  margin: 20px;
+  gap: 20px; /* Spacing between elements */
+}
+
+.expert-talk-content {
+  flex: 1;
+  padding-right: 20px;
+  max-width: 600px; /* Limit width for better layout on larger screens */
+}
+
+.expert-talk-content h2 {
+  font-size: 28px; /* Slightly larger for emphasis */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.expert-talk-content span {
+  color: #6cd9a3; /* Highlighted text color */
+}
+
+.expert-talk-content p {
+  font-size: 16px;
+  line-height: 1.5; /* Improved readability */
+  margin-bottom: 20px;
+  color: #d1d1d1;
+}
+
+.talk-expert-button {
+  background: linear-gradient(90deg, #6cd9a3, #4db8f6);
+  color: #000000;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+.talk-expert-button:hover {
+  background: linear-gradient(90deg, #ea550b, #f1d928);
+}
+
+.expert-talk-image {
+  flex: 1;
+  display: flex; /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
+  align-items: center;
+  max-width: 600px; /* Limit maximum image width */
+}
+
+.expert-talk-image img {
+  width: 80%; /* Reduce the image size to 80% of its container width */
+  max-width: 400px; /* Maximum image width */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 8px;
+  object-fit: cover; /* Ensures the image scales properly within its container */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow to make it pop */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .expert-talk-container {
+    flex-direction: column; /* Stack elements for smaller screens */
+    padding: 20px;
+  }
+
+  .expert-talk-content {
+    padding-right: 0;
+    text-align: center; /* Center-align content for smaller screens */
+  }
+
+  .talk-expert-button {
+    margin: 10px auto; /* Center button */
+  }
+
+  .expert-talk-image {
+    margin-top: 20px; /* Add spacing above image */
+  }
+}

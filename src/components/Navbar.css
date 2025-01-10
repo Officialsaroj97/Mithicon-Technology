@@ -1,0 +1,138 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 60px;
+  background-color: #002855; /* Dark background color */
+  position: fixed;
+  font-weight: 600;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+/* Logo styling */
+.navbar-logo img {
+  max-width: 180px; /* Adjust size */
+  height: auto;
+}
+
+/* Links container */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Each link item */
+.navbar-links li {
+  margin-left: 30px;
+}
+
+/* Link styling */
+/* Link styling */
+.navbar-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold; /* Updated to make links bold */
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffc857; /* Highlighted link color */
+}
+
+/* Button Styling */
+.navbar-btn {
+  background-color: #ffffff;
+  border: none;
+  color: #101820ff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.navbar-btn:hover {
+  background: linear-gradient(90deg, #ea550b, #f1d928);
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Responsive Design */
+
+/* For screens smaller than 1024px */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+
+  .navbar-logo img {
+    max-width: 150px;
+  }
+
+  .navbar-links li {
+    margin-left: 20px;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+  }
+
+  .navbar-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .navbar-logo {
+    margin-bottom: 20px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .navbar-btn {
+    margin-top: 15px;
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .navbar-links a {
+    font-size: 12px;
+  }
+
+  .navbar-btn {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+}

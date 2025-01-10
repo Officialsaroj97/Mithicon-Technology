@@ -1,0 +1,110 @@
+/* Footer Container */
+.footer-container {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.gradient-bar {
+  background: linear-gradient(90deg, #62b4bd, #6febd6);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.lets-talk-btn {
+  background-color: #51b0e7;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.lets-talk-btn:hover {
+  background: linear-gradient(90deg, #ea550b, #f1d928);
+  transform: scale(1.05); /* Subtle scaling on hover */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 2px solid #444;
+  border-bottom: 3px solid #444;
+}
+
+.footer-logo img {
+  width: 250px; /* Increased logo size */
+  max-width: 100%; /* Ensure responsiveness */
+}
+
+.contact-info {
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #348fff;
+  text-decoration: none;
+}
+
+.footer-links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #34c3ff;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo img {
+    width: 200px; /* Slightly smaller logo on smaller screens */
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .lets-talk-btn {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
