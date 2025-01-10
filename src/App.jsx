@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import TrainingProcess from "./components/TrainingProcess";
 import "./App.css";
 import FeatureSection from "./components/FeatureSection";
+
 import JobSection from "./components/JobSection";
 import StatsSection from "./components/StatsSection";
 import WhyTrainingSection from "./components/WhyTrainingSection";
