@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./HeroSection.css";
 import videoThumbnail1 from "../assets/videothumbnail1.png";
 import videoThumbnail2 from "../assets/videothumbnail2.png";
@@ -11,6 +12,8 @@ import demoVideo4 from "../assets/video4.mp4";
 import Typed from "typed.js";
 
 const HeroSection = () => {
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+
   const videos = [
     { src: demoVideo1, thumbnail: videoThumbnail1 },
     { src: demoVideo2, thumbnail: videoThumbnail2 },
@@ -59,6 +62,16 @@ const HeroSection = () => {
     };
   }, []);
 
+  // Navigate to the Contact page when the Talk to Expert button is clicked
+  const handleTalkToExpertClick = () => {
+    navigate("/contact"); // Navigate to the /contact route
+  };
+
+  // Navigate to the ComInfo page when the What is Mithicon button is clicked
+  const handleWhatIsMithiconClick = () => {
+    navigate("/cominfo"); // Navigate to the /cominfo route
+  };
+
   return (
     <section className="hero-section">
       <div className="hero-content">
@@ -99,11 +112,15 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="cta-buttons">
-            <button className="cta-button talk-to-expert">
+            <button
+              className="cta-button talk-to-expert"
+              onClick={handleTalkToExpertClick} // Attach the click handler here
+            >
               Talk to Expert
             </button>
             <button
               className="cta-button what-is-mithicon"
+              onClick={handleWhatIsMithiconClick} // Attach the click handler for "What is Mithicon?"
               aria-label="Learn More About Mithicon"
             >
               ▶ What is Mithicon?

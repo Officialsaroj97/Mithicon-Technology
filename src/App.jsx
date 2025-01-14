@@ -15,9 +15,9 @@ import SolutionSection from "./components/SolutionSection";
 import ClientsSection from "./components/ClientSection";
 import LoginPage from "./components/LoginPage";
 import ContactPage from "./components/ContactPage";
-import AboutUs from "./components/AboutUs";
-import BlogPage from "./components/BlogPage"; // Import the Blog Page
-import BlogDetails from "./components/BlogDetails"; // Import the Blog Details Page
+import ComInfo from "./components/ComInfo"; // Updated import to ComInfo
+import BlogPage from "./components/BlogPage";
+import BlogDetails from "./components/BlogDetails";
 
 function App() {
   return (
@@ -50,8 +50,8 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           {/* Contact route */}
           <Route path="/contact" element={<ContactPage />} />
-          {/* About Us route */}
-          <Route path="/about" element={<AboutUs />} />
+          {/* ComInfo route for "What is Mithicon?" */}
+          <Route path="/cominfo" element={<ComInfo />} />
           {/* Blog route */}
           <Route path="/blog" element={<BlogPage />} />
           {/* Blog Details route */}
