@@ -1,6 +1,6 @@
 /* General Styles for HeroSection */
 .hero-section {
-  padding-top: 120px; /* Increased padding for more space below navbar */
+  padding-top: 80px; /* Increased padding for more space below navbar */
   margin-top: 40px; /* Added margin to the top */
   background-color: #f0ecec;
   display: flex;

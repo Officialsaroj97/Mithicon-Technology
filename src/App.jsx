@@ -18,6 +18,7 @@ import ContactPage from "./components/ContactPage";
 import ComInfo from "./components/ComInfo"; // Updated import to ComInfo
 import BlogPage from "./components/BlogPage";
 import BlogDetails from "./components/BlogDetails";
+import AboutUs from "./components/AboutUs"; // Import the AboutUs component
 
 function App() {
   return (
@@ -56,6 +57,8 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
           {/* Blog Details route */}
           <Route path="/blog/:id" element={<BlogDetails />} />
+          {/* About Us route */}
+          <Route path="/about" element={<AboutUs />} />
         </Routes>
       </div>
     </Router>
