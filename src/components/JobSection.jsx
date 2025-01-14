@@ -1,6 +1,21 @@
 import "./JobSection.css";
 
 const JobSection = () => {
+  const jobCards = [
+    "Sr Executive",
+    "Accounts Head",
+    "EA",
+    "Merchandiser",
+    "Coordinators",
+    "CRM",
+    "Software Engineer",
+    "Project Manager",
+    "Marketing Head",
+    "Product Specialist",
+    "HR Executive",
+    "Finance Lead",
+  ];
+
   return (
     <div className="job-section">
       <h1>
@@ -14,20 +29,25 @@ const JobSection = () => {
         <button className="cta-button">We want to save time and money</button>
       </div>
 
-      <div className="job-cards-container">
-        <div className="job-card left-to-right">Sr Executive</div>
-        <div className="job-card right-to-left">Accounts Head</div>
-        <div className="job-card left-to-right">EA</div>
-        <div className="job-card right-to-left">Merchandiser</div>
-        <div className="job-card left-to-right">Coordinators</div>
-        <div className="job-card right-to-left">CRM</div>
-        {/* Additional job profiles */}
-        <div className="job-card left-to-right">Software Engineer</div>
-        <div className="job-card right-to-left">Project Manager</div>
-        <div className="job-card left-to-right">Marketing Head</div>
-        <div className="job-card right-to-left">Product Specialist</div>
-        <div className="job-card left-to-right">HR Executive</div>
-        <div className="job-card right-to-left">Finance Lead</div>
+      {/* Job Cards Wrapper */}
+      <div className="job-cards-wrapper">
+        {/* First Row: Left-to-Right */}
+        <div className="job-cards-container">
+          {jobCards.concat(jobCards).map((job, index) => (
+            <div className="job-card" key={index}>
+              {job}
+            </div>
+          ))}
+        </div>
+
+        {/* Second Row: Right-to-Left */}
+        <div className="job-cards-container">
+          {jobCards.concat(jobCards).map((job, index) => (
+            <div className="job-card" key={index}>
+              {job}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
