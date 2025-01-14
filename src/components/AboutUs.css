@@ -1,0 +1,105 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url("./path-to-hero-image.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-section .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-section .title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-section .highlight {
+  color: #f39c12;
+}
+
+.hero-section .description {
+  font-size: 1.2rem;
+}
+
+.hero-section .contact-button {
+  padding: 10px 20px;
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Sections */
+.info-section,
+.vision-section,
+.strength-section,
+.about-founder-section {
+  padding: 50px 20px;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.stat {
+  text-align: center;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat h3 {
+  font-size: 2rem;
+  color: #f39c12;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+  }
+
+  .strength-header,
+  .about-founder-section {
+    flex-direction: column;
+  }
+
+  .stat {
+    width: 100%;
+  }
+}

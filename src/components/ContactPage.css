@@ -1,0 +1,174 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+.contact-page {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 30px;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.clients {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.clients img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.clients img:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Form Styles */
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-form input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.submit-btn {
+  width: auto; /* Set the width to auto for smaller size */
+  padding: 15px 40px; /* Reduced padding to make the button smaller */
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 0.875rem; /* Slightly smaller font size */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block; /* Make it a block-level element */
+  margin: 0 auto; /* Center it horizontally */
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .contact-page {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .contact-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .clients {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .clients img {
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 15px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .contact-form input,
+  .submit-btn {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .contact-form input {
+    font-size: 0.875rem;
+  }
+
+  .submit-btn {
+    font-size: 0.875rem;
+  }
+
+  .clients img {
+    height: 25px;
+  }
+}

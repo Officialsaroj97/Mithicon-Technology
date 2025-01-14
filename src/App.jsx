@@ -2,9 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TrainingProcess from "./components/TrainingProcess";
-import "./App.css";
 import FeatureSection from "./components/FeatureSection";
-
 import JobSection from "./components/JobSection";
 import StatsSection from "./components/StatsSection";
 import WhyTrainingSection from "./components/WhyTrainingSection";
@@ -16,6 +14,10 @@ import Testimonials from "./components/Testimonials";
 import SolutionSection from "./components/SolutionSection";
 import ClientsSection from "./components/ClientSection";
 import LoginPage from "./components/LoginPage";
+import ContactPage from "./components/ContactPage";
+import AboutUs from "./components/AboutUs";
+import BlogPage from "./components/BlogPage"; // Import the Blog Page
+import BlogDetails from "./components/BlogDetails"; // Import the Blog Details Page
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
+          {/* Main route with HeroSection */}
           <Route
             path="/"
             element={
@@ -43,7 +46,16 @@ function App() {
               </>
             }
           />
+          {/* Login route */}
           <Route path="/login" element={<LoginPage />} />
+          {/* Contact route */}
+          <Route path="/contact" element={<ContactPage />} />
+          {/* About Us route */}
+          <Route path="/about" element={<AboutUs />} />
+          {/* Blog route */}
+          <Route path="/blog" element={<BlogPage />} />
+          {/* Blog Details route */}
+          <Route path="/blog/:id" element={<BlogDetails />} />
         </Routes>
       </div>
     </Router>

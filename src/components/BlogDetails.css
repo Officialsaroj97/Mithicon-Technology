@@ -1,0 +1,16 @@
+.blog-details {
+  padding: 20px;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-details-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.blog-details-content {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}

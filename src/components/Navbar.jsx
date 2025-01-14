@@ -1,28 +1,27 @@
 import "./Navbar.css";
 import logo from "../assets/mithiconlogo.png";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src={logo} alt="Mithicon Logo" />
+        <Link to="/">
+          <img src={logo} alt="Mithicon Logo" />
+        </Link>
       </div>
       <ul className="navbar-links">
         <li>
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#about">About Us</a>
+          <Link to="/about">About Us</Link>
         </li>
         <li>
-          <a href="#use-case">Use Case</a>
+          <Link to="/blog">Blogs</Link>
         </li>
         <li>
-          <a href="#blogs">Blogs</a>
-        </li>
-        <li>
-          <a href="#contact">Contact Us</a>
+          <Link to="/contact">Contact Us</Link>
         </li>
       </ul>
       <Link to="/login">
