@@ -1,8 +1,13 @@
 import { useState } from "react";
-import "./LoginPage.css"; // Optional: Add your CSS styles here
+import { useNavigate } from "react-router-dom";
+import { signup, login } from "../services/authService"; // API functions import karein
+import "./LoginPage.css";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [isSignUp, setIsSignUp] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,14 +35,33 @@ const LoginPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can add form validation here
 
-    // Show success message and reset form
-    setMessage(isSignUp ? "Sign Up Successful!" : "Sign In Successful!");
+    if (isSignUp) {
+      if (formData.password !== formData.confirmPassword) {
+        setMessage("Passwords do not match!");
+        return;
+      }
+      try {
+        await signup(formData.name, formData.email, formData.password);
+        setMessage("Sign Up Successful! Please Sign In.");
+        setIsSignUp(false);
+      } catch (error) {
+        setMessage(error);
+      }
+    } else {
+      try {
+        await login(formData.email, formData.password);
+        setMessage("Login Successful!");
+        setTimeout(() => {
+          navigate("/videos"); // Redirect after login
+        }, 1000);
+      } catch (error) {
+        setMessage(error);
+      }
+    }
 
-    // Clear all input fields
     setFormData({
       name: "",
       email: "",
@@ -63,6 +87,7 @@ const LoginPage = () => {
                   placeholder="Enter your name"
                   value={formData.name}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -73,27 +98,42 @@ const LoginPage = () => {
                   placeholder="Enter your email"
                   value={formData.email}
                   onChange={handleChange}
+                  required
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group password-container">
                 <label htmlFor="password">Password</label>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   id="password"
                   placeholder="Enter your password"
                   value={formData.password}
                   onChange={handleChange}
+                  required
                 />
+                <span
+                  className="password-toggle"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? "👁️‍🗨️" : "👁️"}
+                </span>
               </div>
-              <div className="form-group">
+              <div className="form-group password-container">
                 <label htmlFor="confirmPassword">Confirm Password</label>
                 <input
-                  type="password"
+                  type={showConfirmPassword ? "text" : "password"}
                   id="confirmPassword"
                   placeholder="Confirm your password"
                   value={formData.confirmPassword}
                   onChange={handleChange}
+                  required
                 />
+                <span
+                  className="password-toggle"
+                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                >
+                  {showConfirmPassword ? "👁️‍🗨️" : "👁️"}
+                </span>
               </div>
               <button type="submit" className="form-button">
                 Sign Up
@@ -118,17 +158,25 @@ const LoginPage = () => {
                   placeholder="Enter your email"
                   value={formData.email}
                   onChange={handleChange}
+                  required
                 />
               </div>
-              <div className="form-group">
+              <div className="form-group password-container">
                 <label htmlFor="password">Password</label>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   id="password"
                   placeholder="Enter your password"
                   value={formData.password}
                   onChange={handleChange}
+                  required
                 />
+                <span
+                  className="password-toggle"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? "👁️‍🗨️" : "👁️"}
+                </span>
               </div>
               <button type="submit" className="form-button">
                 Sign In

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import NavBar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TrainingProcess from "./components/TrainingProcess";
@@ -15,18 +16,20 @@ import SolutionSection from "./components/SolutionSection";
 import ClientsSection from "./components/ClientSection";
 import LoginPage from "./components/LoginPage";
 import ContactPage from "./components/ContactPage";
-import ComInfo from "./components/ComInfo"; // Updated import to ComInfo
+import ComInfo from "./components/ComInfo";
 import BlogPage from "./components/BlogPage";
 import BlogDetails from "./components/BlogDetails";
-import AboutUs from "./components/AboutUs"; // Import the AboutUs component
+import AboutUs from "./components/AboutUs";
+import VideoPage from "./components/VideoPage"; // ✅ Added Video Page
 
 function App() {
+  const [user, setUser] = useState(null);
+
   return (
     <Router>
       <div className="App">
         <NavBar />
         <Routes>
-          {/* Main route with HeroSection */}
           <Route
             path="/"
             element={
@@ -47,17 +50,22 @@ function App() {
               </>
             }
           />
-          {/* Login route */}
-          <Route path="/login" element={<LoginPage />} />
-          {/* Contact route */}
+          {/* Login Route */}
+          <Route path="/login" element={<LoginPage setUser={setUser} />} />
+          {/* Video Page Route (Only show if user is logged in) */}
+          <Route
+            path="/videos"
+            element={user ? <VideoPage /> : <LoginPage setUser={setUser} />}
+          />
+          {/* Contact Route */}
           <Route path="/contact" element={<ContactPage />} />
-          {/* ComInfo route for "What is Mithicon?" */}
+          {/* ComInfo Route */}
           <Route path="/cominfo" element={<ComInfo />} />
-          {/* Blog route */}
+          {/* Blog Route */}
           <Route path="/blog" element={<BlogPage />} />
-          {/* Blog Details route */}
+          {/* Blog Details Route */}
           <Route path="/blog/:id" element={<BlogDetails />} />
-          {/* About Us route */}
+          {/* About Us Route */}
           <Route path="/about" element={<AboutUs />} />
         </Routes>
       </div>

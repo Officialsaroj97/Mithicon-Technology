@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import "aos/dist/aos.css";
 import AOS from "aos";
 import "./AboutUs.css";
@@ -14,7 +15,9 @@ const AboutUs = () => {
         <div className="overlay">
           <h1 className="title">
             The Innovative And Efficient Solution For{" "}
-            <span className="highlight">Automated Employee Training</span>
+            <span className="highlight">
+              Automated Employee Training & SOP Development
+            </span>
           </h1>
           <p className="description">
             We revolutionize employee training by providing top-notch document
@@ -22,9 +25,11 @@ const AboutUs = () => {
             solutions ensure quick onboarding, minimize training costs, and
             enhance overall productivity.
           </p>
-          <button className="contact-button" data-aos="zoom-in">
+
+          {/* Contact Us Button with Router Link */}
+          <Link to="/contact" className="contact-button" data-aos="zoom-in">
             Contact Us
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -47,7 +52,7 @@ const AboutUs = () => {
       <div className="vision-section" data-aos="fade-up">
         <div className="vision-content">
           <h2 className="vision-title">
-            02 <span className="highlight">Focuskon Vision</span>
+            02 <span className="highlight">Mithicon Vision</span>
           </h2>
           <p className="vision-description">
             Our Vision Is To Eliminate The Global Challenge Of Time-Consuming
@@ -73,35 +78,21 @@ const AboutUs = () => {
                 Training Solutions.
               </h2>
               <p className="strength-description">
-                At Focuskon, We Believe In Creating Sustainable, Scalable
-                Systems That Not Only Train Employees But Also Drive Business
-                Growth.
+                At Mithicon Technology Pvt Ltd, We Believe In Creating
+                Sustainable, Scalable Systems That Not Only Train Employees But
+                Also Drive Business Growth.
               </p>
             </div>
           </div>
           <blockquote className="strength-quote">
-            “Focuskon Excels In Resolving The Critical Challenges That
+            “Mithicon Excels In Resolving The Critical Challenges That
             Businesses Face When Onboarding And Training New Employees.”
           </blockquote>
         </div>
       </div>
 
       <div className="about-founder-section" data-aos="fade-up">
-        <div className="about-founder-content">
-          <img
-            src="./path-to-founder-image.jpg"
-            alt="Founder"
-            className="founder-image-large"
-          />
-          <div className="founder-description">
-            <h2>About our Founder</h2>
-            <p>
-              Nikhil Bansal, a dynamic entrepreneur, navigated the bustling
-              business landscape through NM Mumbai and SP Jain’s Family Managed
-              Business Program.
-            </p>
-          </div>
-        </div>
+        <div className="about-founder-content"></div>
         <div className="stats-section">
           <div className="stat" data-aos="fade-right">
             <h3>3,000+</h3>
@@ -116,6 +107,13 @@ const AboutUs = () => {
             <p>Operations People Trained</p>
           </div>
         </div>
+      </div>
+
+      {/* Contact Us Button with Link */}
+      <div className="contact-button-container" data-aos="zoom-in">
+        <Link to="/contact" className="contact-button">
+          Contact Us
+        </Link>
       </div>
     </div>
   );

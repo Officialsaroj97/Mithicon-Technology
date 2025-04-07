@@ -51,6 +51,7 @@ html {
 }
 
 .hero-section .contact-button {
+  text-decoration: none; /* Remove underline */
   padding: 10px 20px;
   background: #f39c12;
   color: #fff;
